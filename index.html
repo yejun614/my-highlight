@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>My highlight</title>
+
+	<!-- hightlight.js -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- Custom Scripts -->
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+	<main>
+		<a href="https://github.com/yejun614/my-highlight" target="_blank">Github repository</a>
+    <h2>Syntax Highlight</h2>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="language" class="col-form-label">Language</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="language" class="form-control">
+      </div>
+      <div class="col-auto">
+        <span class="form-text">
+          Programming Language
+        </span>
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="indent-char" class="col-form-label">Indent</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="indent-char" class="form-control">
+      </div>
+      <div class="col-auto">
+        <span class="form-text">
+          Indent alternative character
+        </span>
+      </div>
+    </div>
+
+		<div class="form-floating">
+			<textarea class="form-control" placeholder="Leave a comment here" id="src-textarea" style="height: 100px"></textarea>
+			<label for="src-textarea">Source</label>
+		</div>
+
+		<button type="button" class="btn btn-primary" onclick="convert();">Convert</button>
+    <button type="button" class="btn btn-warning" onclick="copy();">Copy</button>
+		
+    <pre id="result"></pre>
+
+    <footer>
+      <p>Development by <a href="https://github.com/yejun614" target="_blank">YeJun, Jung (yejun614@naver.com)</a></p>
+      <p>Highlight by <a href="https://highlightjs.org/" target="_blank">highlight.js</a></p>
+      <p>CSS Framework by <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p>
+    </footer>
+	</main>
+</body>
+</html>
+
