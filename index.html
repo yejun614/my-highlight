@@ -55,17 +55,27 @@
       </div>
     </div>
 
-    <div id="style-dropdown" class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Styles
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-    
+		<div class="dropdown-wrap">
+			<div id="style-dropdown" class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Styles
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item disabled">No items</a></li>
+				</ul>
+			</div>
+
+			<div id="frame-dropdown" class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Styles
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="javascript:setFrame(false)">Just code</a></li>
+					<li><a class="dropdown-item" href="javascript:setFrame(true)">Table + Line number</a></li>
+				</ul>
+			</div>
+		</div>
+
 		<div class="form-floating">
 			<textarea class="form-control" placeholder="Leave a comment here" id="src-textarea" style="height: 100px"></textarea>
 			<label for="src-textarea">Source</label>
@@ -74,7 +84,7 @@
 		<button type="button" class="btn btn-primary" onclick="convert();">Convert</button>
     <button type="button" class="btn btn-warning" onclick="copy();">Copy</button>
 		
-    <pre id="result"></pre>
+    <pre id="result" class="hljs"></pre>
 
     <footer>
       <p>Development by <a href="https://github.com/yejun614" target="_blank">YeJun, Jung (yejun614@naver.com)</a></p>

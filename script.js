@@ -1,4 +1,5 @@
 
+let IsTableFrame = true;
 let CurrentStyleTitle = '';
 
 const highlightStylesUrl = "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/";
@@ -134,6 +135,18 @@ function changeHighlightStyle(title) {
 	CurrentStyleTitle = title;
 }
 
+function setFrame(isTableFrame) {
+  IsTableFrame = isTableFrame;
+
+  const frameDropdown = document.querySelector('#frame-dropdown > .dropdown-toggle');
+  frameDropdown.innerText = isTableFrame ? 'Table + Line number' : 'Just code';
+
+  const result = document.getElementById('result');
+  if (result.innerHTML.trim() !== '') {
+    convert();
+  }
+}
+
 function convert() {
   const srcTextarea = document.getElementById('src-textarea');
   const resultElement = document.getElementById('result');
@@ -150,7 +163,7 @@ function convert() {
 		hl = hljs.highlightAuto(srcTextarea.value);
 	}
 
-  const html = hl2Table(hl);
+  const html = IsTableFrame ? hl2Table(hl) : hl.value;
   resultElement.innerHTML = html;
 }
 
@@ -189,6 +202,7 @@ function copy() {
 
 	setTimeout(() => {
 		changeHighlightStyle('default');
+    setFrame(true);
 	}, 100);
 })();
 

@@ -39,6 +39,20 @@ main h2 {
   margin-bottom: 20px;
 }
 
+main .dropdown-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+main .dropdown-wrap > .dropdown {
+  margin-right: 10px;
+}
+
+main .dropdown-wrap > .dropdown > .dropdown-menu {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
 #result table tr {
   margin: 5px;
 }
