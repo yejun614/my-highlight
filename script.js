@@ -188,7 +188,7 @@ function hl2Table(hl) {
     result += `<tr><td class="right">${i + 1}</td><td>${lines[i]}</td></tr>`;
   }
 
-  return `<table class="hljs">${result}</table>`;
+  return `<table>${result}</table>`;
 }
 
 function copy() {
