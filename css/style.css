@@ -53,6 +53,10 @@ main .dropdown-wrap > .dropdown > .dropdown-menu {
   overflow-y: scroll;
 }
 
+#result {
+  padding: 10px;
+}
+
 #result table tr {
   margin: 5px;
 }
