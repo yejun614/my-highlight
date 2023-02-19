@@ -196,6 +196,40 @@ function copy() {
 	navigator.clipboard.writeText(resultElement.innerHTML);
 }
 
+function saveImage() {
+  const resultElement = document.getElementById("result");
+  const scale = 2;
+
+  domtoimage
+    .toPng(
+      resultElement,
+      {
+        width: resultElement.scrollWidth * scale,
+        height: resultElement.scrollHeight * scale,
+        style: {
+          transform: `
+            scale(${scale})
+            translate(
+              ${resultElement.offsetWidth * (scale - 1) / 2 / scale}px,
+              ${resultElement.offsetHeight * (scale - 1) / 2 / scale}px
+            )
+          `,
+        },
+      }
+    )
+    .then(dataUrl => {
+      const link = document.createElement('a');
+
+      link.download = 'image.png';
+      link.href = dataUrl;
+      link.click();
+    })
+    .catch(error => {
+      alert("Error: Something was wrong!");
+      console.error(error);
+    });
+}
+
 // ENTRY POINT!
 (() => {
 	const styleTitles = loadStyles(highlightStylesUrl, highlightStyles);

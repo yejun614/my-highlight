@@ -1,6 +1,13 @@
 # my-highlight
 온라인 구문 강조 웹사이트 입니다.
 
+## 기능 소개
+- 소스코드 문법 강조
+- 다양한 테마 적용 가능
+- Line Number + Table 적용 가능
+- HTML Format Copy 지원
+- 고화질 이미지 변환 지원
+
 ## 개발하게 된 이유
 > 소스코드를 문서로 옮길때 구문강조가 되면서 동시에 Line number도 넣을려고 하닌깐  
 > table 구조가 유용하다는 사실을 알게 되었습니다.  
@@ -15,4 +22,5 @@
 - my-highlight ([MIT License](https://github.com/yejun614/my-highlight/blob/main/LICENSE))
 - highlight.js ([BSD 3-Clause License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE))
 - Bootstrap ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE))
+- dom-to-image ([MIT License](https://github.com/tsayen/dom-to-image/blob/master/LICENSE))
 
